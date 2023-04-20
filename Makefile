@@ -2,6 +2,10 @@
 bnd: ## Build and Deploy All Sites
 	make build-site-1 build-site-2 deploy-site-1 deploy-site-2
 
+.PHONY: build
+build: ## Build All Sites
+	make build-site-1 build-site-2
+
 .PHONY: help
 help: ## Display help message
 	@grep -E '^[0-9a-zA-Z_-]+\.*[0-9a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
