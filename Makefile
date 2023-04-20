@@ -1,5 +1,5 @@
 .PHONY: bnd
-bnd: ## Build and Deploy
+bnd: ## Build and Deploy All Sites
 	make build-site-1 build-site-2 deploy-site-1 deploy-site-2
 
 .PHONY: help
